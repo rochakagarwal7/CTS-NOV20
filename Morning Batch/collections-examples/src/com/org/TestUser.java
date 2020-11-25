@@ -15,7 +15,7 @@ public class TestUser {
 		
 		for(User user : list) {
 			if(user.getName().length() > 5) {
-				System.out.println("Id = "+user.getId()+", Name = "+user.getName());
+				System.out.println(user);
 			}
 		}
 	}
