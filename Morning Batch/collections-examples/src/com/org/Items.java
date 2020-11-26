@@ -1,9 +1,9 @@
 package com.org;
 
 public class Items implements Comparable<Items>{
-	private int id;
+	private int id; // int -> Integer
 	private String name;
-	private double price;
+	private double price; // double -> Double
 	
 	public Items() {
 		super();

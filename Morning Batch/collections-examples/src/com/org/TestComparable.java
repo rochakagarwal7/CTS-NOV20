@@ -15,7 +15,19 @@ public class TestComparable {
 			System.out.println(item);
 		}
 		System.out.println("---- Sorting ----");
-		Collections.sort(list);
+		Collections.sort(list); // sort() method uses Comparable implementation
+		for(Items item : list) {
+			System.out.println(item);
+		}
+		System.out.println("---- Sorting id in ascending order -----");
+		
+		Collections.sort(list, new Sorting()); // sort() methods uses Comparator implementation 
+		for(Items item : list) {
+			System.out.println(item);
+		}
+		System.out.println("---- Sorting name in descending order -----");
+		
+		Collections.sort(list, new AnotherSorting()); // sort() methods uses Comparator implementation 
 		for(Items item : list) {
 			System.out.println(item);
 		}
