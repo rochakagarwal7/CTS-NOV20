@@ -17,5 +17,11 @@ public class EmployeeController {
 		ModelAndView mav = new ModelAndView("hello", "msg", service.fetchDateTimeService());
 		return mav;
 	}
+	
+	@RequestMapping(value = "/sortByNameReverse", method = RequestMethod.GET)
+	public ModelAndView viewAllEmployeesNameInReverseOrder() {
+		ModelAndView mav = new ModelAndView("hello", "msg", service.getAllEmployeesNamesInReverseOrder());
+		return mav;
+	}
 }
 
