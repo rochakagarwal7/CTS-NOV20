@@ -22,4 +22,9 @@ public class EmployeeDao {
 		return jdbcTemplate.query("select * from employee", 
 				(rs, num) -> new Employee(rs.getInt("id"), rs.getString("name"), rs.getDouble("salary")));
 	}
+	
+	public Employee fetchEmployee(int id) {
+		return jdbcTemplate.queryForObject("select * from employee where id = ?", new Object[] {id}, 
+				(rs, num) -> new Employee(rs.getInt("id"), rs.getString("name"), rs.getDouble("salary")));
+	}
 }

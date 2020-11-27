@@ -22,4 +22,8 @@ public class EmployeeService {
 		.collect(Collectors.toList());
 		return list;
 	}
+	
+	public Employee fetchEmployee(int id) {
+		return dao.fetchEmployee(id);
+	}
 }
